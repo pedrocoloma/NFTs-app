@@ -9,13 +9,13 @@
 /* Begin PBXBuildFile section */
 		F5E6200627E67F1400C3B2FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E6200527E67F1400C3B2FC /* AppDelegate.swift */; };
 		F5E6200827E67F1400C3B2FC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E6200727E67F1400C3B2FC /* SceneDelegate.swift */; };
-		F5E6200A27E67F1400C3B2FC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E6200927E67F1400C3B2FC /* ViewController.swift */; };
-		F5E6200D27E67F1400C3B2FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5E6200B27E67F1400C3B2FC /* Main.storyboard */; };
 		F5E6200F27E67F1600C3B2FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5E6200E27E67F1600C3B2FC /* Assets.xcassets */; };
 		F5E6201227E67F1600C3B2FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5E6201027E67F1600C3B2FC /* LaunchScreen.storyboard */; };
 		F5E6201D27E67F1600C3B2FC /* NFTsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E6201C27E67F1600C3B2FC /* NFTsTests.swift */; };
 		F5E6202727E67F1600C3B2FC /* NFTsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E6202627E67F1600C3B2FC /* NFTsUITests.swift */; };
 		F5E6202927E67F1600C3B2FC /* NFTsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E6202827E67F1600C3B2FC /* NFTsUITestsLaunchTests.swift */; };
+		F5E6203727E6B43000C3B2FC /* FeaturedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E6203527E6B43000C3B2FC /* FeaturedViewController.swift */; };
+		F5E6203827E6B43000C3B2FC /* FeaturedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5E6203627E6B43000C3B2FC /* FeaturedViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +39,6 @@
 		F5E6200227E67F1400C3B2FC /* NFTs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NFTs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5E6200527E67F1400C3B2FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F5E6200727E67F1400C3B2FC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F5E6200927E67F1400C3B2FC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		F5E6200C27E67F1400C3B2FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F5E6200E27E67F1600C3B2FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F5E6201127E67F1600C3B2FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F5E6201327E67F1600C3B2FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +47,8 @@
 		F5E6202227E67F1600C3B2FC /* NFTsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NFTsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5E6202627E67F1600C3B2FC /* NFTsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFTsUITests.swift; sourceTree = "<group>"; };
 		F5E6202827E67F1600C3B2FC /* NFTsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFTsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F5E6203527E6B43000C3B2FC /* FeaturedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedViewController.swift; sourceTree = "<group>"; };
+		F5E6203627E6B43000C3B2FC /* FeaturedViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeaturedViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,11 +101,11 @@
 			children = (
 				F5E6200527E67F1400C3B2FC /* AppDelegate.swift */,
 				F5E6200727E67F1400C3B2FC /* SceneDelegate.swift */,
-				F5E6200927E67F1400C3B2FC /* ViewController.swift */,
-				F5E6200B27E67F1400C3B2FC /* Main.storyboard */,
 				F5E6200E27E67F1600C3B2FC /* Assets.xcassets */,
 				F5E6201027E67F1600C3B2FC /* LaunchScreen.storyboard */,
 				F5E6201327E67F1600C3B2FC /* Info.plist */,
+				F5E6203527E6B43000C3B2FC /* FeaturedViewController.swift */,
+				F5E6203627E6B43000C3B2FC /* FeaturedViewController.xib */,
 			);
 			path = NFTs;
 			sourceTree = "<group>";
@@ -233,7 +233,7 @@
 			files = (
 				F5E6201227E67F1600C3B2FC /* LaunchScreen.storyboard in Resources */,
 				F5E6200F27E67F1600C3B2FC /* Assets.xcassets in Resources */,
-				F5E6200D27E67F1400C3B2FC /* Main.storyboard in Resources */,
+				F5E6203827E6B43000C3B2FC /* FeaturedViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,8 +258,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F5E6200A27E67F1400C3B2FC /* ViewController.swift in Sources */,
 				F5E6200627E67F1400C3B2FC /* AppDelegate.swift in Sources */,
+				F5E6203727E6B43000C3B2FC /* FeaturedViewController.swift in Sources */,
 				F5E6200827E67F1400C3B2FC /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -297,14 +297,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		F5E6200B27E67F1400C3B2FC /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F5E6200C27E67F1400C3B2FC /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		F5E6201027E67F1600C3B2FC /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -444,7 +436,6 @@
 				INFOPLIST_FILE = NFTs/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -472,7 +463,6 @@
 				INFOPLIST_FILE = NFTs/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
