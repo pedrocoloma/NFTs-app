@@ -32,8 +32,8 @@ class AppCoordinator: Coordinator {
         window?.rootViewController = tabBarController
             
         children = [
-            ExampleCoordinator(),
-            ExampleCoordinator()
+            FeaturedCoordinator(),
+            FeaturedCoordinator()
         ]
     }
     

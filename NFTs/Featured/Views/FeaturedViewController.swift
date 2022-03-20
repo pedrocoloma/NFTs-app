@@ -11,6 +11,7 @@ class FeaturedViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "alguma coisa"
         // Do any additional setup after loading the view.
     }
 
