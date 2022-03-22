@@ -7,6 +7,17 @@
 
 import Foundation
 
+protocol FeaturedViewModelDelegate {
+    func didFetchFeaturedData(_ data: FeaturedNFTs)
+}
+
 class FeaturedViewModel {
+    weak var delegate: FeaturedViewModelDelegate?
+    
+    private let service: NFTsServiceProtocol
+    
+    init(service: NFTsServiceProtocol) {
+        self.service = service
+    }
     
 }

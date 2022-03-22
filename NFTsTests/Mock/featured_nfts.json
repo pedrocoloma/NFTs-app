@@ -1,0 +1,45 @@
+{
+    "items":
+    [
+        {
+            "name": "#7894",
+            "collection": "Bored Ape Yacht Club",
+            "id": "01",
+            "description": "",
+            "image_url": "https://lh3.googleusercontent.com/PmEaLtImJTLlgbJKgYenuMAo6e4UTM791ckWPx_zPixAEX6tDzcf5toRwYaRcXzY70W32JEgQjK14MFZZW16lZnbjEwHYN8kAI3GXQ=w600",
+            "listing": "https://opensea.io/assets/0xbc4ca0eda7647a8ab7c2061c2e118a18a936f13d/7894",
+            "top_bid_weth": "79,88",
+            "top_bid_dollars": "235.272,16"
+        },
+        {
+            "name": "#4351",
+            "collection": "Bored Ape Yacht Club",
+            "id": "02",
+            "description": "",
+            "image_url": "https://lh3.googleusercontent.com/OsHTcMlAPgB2atDQlPqTcRILxOMWwGNgsG04S5-N2Q9RLh2PCck4KTvXJte9RI3YkCtHiPyaB1TEiHGsGm_OSQ5fG6lx5um3bJMe-Q=w600",
+            "listing": "https://opensea.io/assets/0xbc4ca0eda7647a8ab7c2061c2e118a18a936f13d/4351https://opensea.io/assets/0xbc4ca0eda7647a8ab7c2061c2e118a18a936f13d/4351",
+            "top_bid_weth": "104,9989",
+            "top_bid_dollars": "309.255,51"
+        },
+        {
+            "name": "#648",
+            "collection": "Bored Ape Yacht Club",
+            "id": "03",
+            "description": "",
+            "image_url": "https://lh3.googleusercontent.com/7KVCNCyadB8prWcVnB5SZ5aqsa2JEfoHHzvrmn0HPBZd8UygXVkz5EgjIDYLeQZGyuJDaagr8Xh0uRqQdopY4gxkJ-DYsU9lp7nZNRY=w600",
+            "listing": "https://opensea.io/assets/0xbc4ca0eda7647a8ab7c2061c2e118a18a936f13d/648",
+            "top_bid_weth": "18.880",
+            "top_bid_dollars": "55.607.641,60"
+        },
+        {
+            "name": "#1552",
+            "collection": "Bored Ape Yacht Club",
+            "id": "04",
+            "description": "",
+            "image_url": "https://lh3.googleusercontent.com/kFn1CG6zDyUXmRduniicxXhEPBE1S3GtJxzmxFcGGWeHhYC4VjTTMc4T3LKJb3oNY4QYrzSKsorzQkbw3w5pSv3kod7m0Cl2h3F1jmg=w600",
+            "listing": "https://opensea.io/assets/0xbc4ca0eda7647a8ab7c2061c2e118a18a936f13d/1552",
+            "top_bid_weth": "15.001",
+            "top_bid_dollars": "44.182.745,32"
+        }
+    ]
+}
