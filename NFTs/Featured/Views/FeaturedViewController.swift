@@ -8,22 +8,40 @@
 import UIKit
 
 class FeaturedViewController: UIViewController {
-
+    
+    // MARK: - Outlets
+    @IBOutlet weak var tableView: UITableView!
+    
+    let items: [String] = []
+    
+    // MARK: - Overrides Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "alguma coisa"
-        // Do any additional setup after loading the view.
+        setupTableView()
     }
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    // MARK: - Private Methods
+    private func setupTableView() {
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
+        
+        tableView.register(UINib(nibName: "FeaturedCell", bundle: nil), forCellReuseIdentifier: "cell")
     }
-    */
+}
 
+extension FeaturedViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return items.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! FeaturedCell
+        cell.nameLabel.text = items[indexPath.row]
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
+    }
 }
