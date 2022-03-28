@@ -6,3 +6,10 @@
 //
 
 import Foundation
+
+enum AppError: Error {
+    case parse
+    case network
+    case emptyResponse
+    case unknown
+}
