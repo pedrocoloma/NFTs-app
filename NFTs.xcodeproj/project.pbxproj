@@ -10,6 +10,8 @@
 		F56DA6B427EA82CB0012ADE0 /* FeaturedViewModelDelegateMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56DA6B327EA82CB0012ADE0 /* FeaturedViewModelDelegateMock.swift */; };
 		F56DA6B727EAA1890012ADE0 /* FeaturedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56DA6B527EAA1890012ADE0 /* FeaturedCell.swift */; };
 		F56DA6B827EAA1890012ADE0 /* FeaturedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F56DA6B627EAA1890012ADE0 /* FeaturedCell.xib */; };
+		F5BC1A5227EFEB6E00847341 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BC1A5127EFEB6E00847341 /* Service.swift */; };
+		F5BC1A5427F0B5A300847341 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BC1A5327F0B5A300847341 /* API.swift */; };
 		F5E6200627E67F1400C3B2FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E6200527E67F1400C3B2FC /* AppDelegate.swift */; };
 		F5E6200827E67F1400C3B2FC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E6200727E67F1400C3B2FC /* SceneDelegate.swift */; };
 		F5E6200F27E67F1600C3B2FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5E6200E27E67F1600C3B2FC /* Assets.xcassets */; };
@@ -49,6 +51,8 @@
 		F56DA6B327EA82CB0012ADE0 /* FeaturedViewModelDelegateMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedViewModelDelegateMock.swift; sourceTree = "<group>"; };
 		F56DA6B527EAA1890012ADE0 /* FeaturedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedCell.swift; sourceTree = "<group>"; };
 		F56DA6B627EAA1890012ADE0 /* FeaturedCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeaturedCell.xib; sourceTree = "<group>"; };
+		F5BC1A5127EFEB6E00847341 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		F5BC1A5327F0B5A300847341 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		F5E6200227E67F1400C3B2FC /* NFTs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NFTs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5E6200527E67F1400C3B2FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F5E6200727E67F1400C3B2FC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -96,6 +100,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F5BC1A4F27EFEB5600847341 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				F5BC1A5027EFEB6100847341 /* Network */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		F5BC1A5027EFEB6100847341 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				F5BC1A5127EFEB6E00847341 /* Service.swift */,
+				F5BC1A5327F0B5A300847341 /* API.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		F5E61FF927E67F1400C3B2FC = {
 			isa = PBXGroup;
 			children = (
@@ -119,6 +140,7 @@
 		F5E6200427E67F1400C3B2FC /* NFTs */ = {
 			isa = PBXGroup;
 			children = (
+				F5BC1A4F27EFEB5600847341 /* Core */,
 				F5E6203F27E7E05000C3B2FC /* Featured */,
 				F5E6200527E67F1400C3B2FC /* AppDelegate.swift */,
 				F5E6200727E67F1400C3B2FC /* SceneDelegate.swift */,
@@ -156,7 +178,7 @@
 				F5E6204127E7E0D200C3B2FC /* ViewModels */,
 				F5E6204227E7E0DB00C3B2FC /* Views */,
 				F5E6204427E7E10600C3B2FC /* Model */,
-				F5E6204327E7E0E800C3B2FC /* Service */,
+				F5E6204327E7E0E800C3B2FC /* Network */,
 			);
 			path = Featured;
 			sourceTree = "<group>";
@@ -188,12 +210,12 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		F5E6204327E7E0E800C3B2FC /* Service */ = {
+		F5E6204327E7E0E800C3B2FC /* Network */ = {
 			isa = PBXGroup;
 			children = (
 				F5E6204F27E7E97B00C3B2FC /* NFTsService.swift */,
 			);
-			path = Service;
+			path = Network;
 			sourceTree = "<group>";
 		};
 		F5E6204427E7E10600C3B2FC /* Model */ = {
@@ -361,7 +383,9 @@
 				F5E6205027E7E97B00C3B2FC /* NFTsService.swift in Sources */,
 				F5E6203727E6B43000C3B2FC /* FeaturedViewController.swift in Sources */,
 				F56DA6B727EAA1890012ADE0 /* FeaturedCell.swift in Sources */,
+				F5BC1A5227EFEB6E00847341 /* Service.swift in Sources */,
 				F5E6200827E67F1400C3B2FC /* SceneDelegate.swift in Sources */,
+				F5BC1A5427F0B5A300847341 /* API.swift in Sources */,
 				F5E6205227E81D2400C3B2FC /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
