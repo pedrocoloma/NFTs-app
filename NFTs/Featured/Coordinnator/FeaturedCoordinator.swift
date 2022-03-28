@@ -21,10 +21,19 @@ class FeaturedCoordinator: Coordinator {
         featuredViewModel = FeaturedViewModel()
         featuredViewController = FeaturedViewController(viewModel: featuredViewModel)
         featuredViewModel.viewDelegate = featuredViewController
+        
         navigation = UINavigationController(rootViewController: featuredViewController)
+        featuredViewModel.delegate = self
     }
     
     func start() {
         
+    }
+}
+
+extension FeaturedCoordinator: FeaturedViewModelDelegate {
+    func didSelect(at position: Int) {
+        let detailsViewController = FeaturedDetailsViewController()
+        navigation.pushViewController(detailsViewController, animated: true)
     }
 }

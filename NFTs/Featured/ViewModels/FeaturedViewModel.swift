@@ -8,7 +8,7 @@
 import Foundation
 
 protocol FeaturedViewModelDelegate: AnyObject {
-    func didFetchFeaturedData(_ data: FeaturedNFTs)
+    func didSelect(at position: Int)
 }
 
 protocol FeaturedViewDelegate: AnyObject {
@@ -29,6 +29,7 @@ class FeaturedViewModel {
         service = FeaturedService()
     }
     
+    // MARK: - Methods
     func fetchData() {
         viewDelegate?.isLoadingData()
         service.fetchFeatured(api: .list) { result in
@@ -40,5 +41,9 @@ class FeaturedViewModel {
                 self.viewDelegate?.dataLoadedWithErrror(error: error)
             }
         }
+    }
+    
+    func didSelect(at position: Int) {
+        delegate?.didSelect(at: position)
     }
 }
