@@ -11,19 +11,34 @@ protocol FeaturedViewModelDelegate: AnyObject {
     func didFetchFeaturedData(_ data: FeaturedNFTs)
 }
 
+protocol FeaturedViewDelegate: AnyObject {
+    func isLoadingData()
+    func dataLoadedWithSuccess()
+    func dataLoadedWithErrror(error: AppError)
+}
+
 class FeaturedViewModel {
     weak var delegate: FeaturedViewModelDelegate?
+    weak var viewDelegate: FeaturedViewDelegate?
     
     var service: FeaturedServiceProtocol
+    
+    var nfts: [NFT] = []
     
     init() {
         service = FeaturedService()
     }
     
     func fetchData() {
-        service.fetchFeatured(api: .list) { nfts in
-            print(nfts)
+        viewDelegate?.isLoadingData()
+        service.fetchFeatured(api: .list) { result in
+            switch result {
+            case .success(let featuredNFTs):
+                self.nfts = featuredNFTs.items
+                self.viewDelegate?.dataLoadedWithSuccess()
+            case .failure(let error):
+                self.viewDelegate?.dataLoadedWithErrror(error: error)
+            }
         }
     }
-    
 }

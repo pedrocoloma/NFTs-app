@@ -12,9 +12,11 @@ class FeaturedViewController: UIViewController {
     // MARK: - Outlets
     @IBOutlet weak var tableView: UITableView!
     
-    let items = ["um", "dois", "três", "quatro"]
+    // MARK: - Properties
     var viewModel: FeaturedViewModel?
+    var items: [NFT] = []
     
+    // MARK: - Initializers
     init(viewModel: FeaturedViewModel) {
         super.init(nibName: nil, bundle: nil)
         self.viewModel = viewModel
@@ -27,7 +29,7 @@ class FeaturedViewController: UIViewController {
     // MARK: - Overrides Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "alguma coisa"
+        title = "featured NFTs"
         setupTableView()
         viewModel?.fetchData()
     }
@@ -40,7 +42,7 @@ class FeaturedViewController: UIViewController {
         tableView.register(UINib(nibName: "FeaturedCell", bundle: nil), forCellReuseIdentifier: "cell")
     }
 }
-
+// MARK: - TableView Delegate & DataSource
 extension FeaturedViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return items.count
@@ -48,11 +50,32 @@ extension FeaturedViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! FeaturedCell
-        cell.nameLabel.text = items[indexPath.row]
+        cell.nameLabel.text = items[indexPath.row].name
         return cell
     }
     
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
+    }
+}
+
+// MARK: - ViewDelegate
+extension FeaturedViewController: FeaturedViewDelegate {
+    func isLoadingData() {
+        // TODO: show shimmer
+    }
+    
+    func dataLoadedWithSuccess() {
+        items = viewModel!.nfts
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
+    }
+    
+    func dataLoadedWithErrror(error: AppError) {
+        DispatchQueue.main.async {
+            let alert = UIAlertController(title: "Error", message: "Error loading featured NFTs", preferredStyle: .alert)
+            self.present(alert, animated: true, completion: nil)
+        }
     }
 }

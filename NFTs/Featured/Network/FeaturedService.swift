@@ -9,24 +9,30 @@ import Foundation
 
 
 protocol FeaturedServiceProtocol {
-    func fetchFeatured(api: FeaturedAPI, _ completion: @escaping ((FeaturedNFTs?) -> Void))
+    func fetchFeatured(api: FeaturedAPI, _ completion: @escaping ((Result<FeaturedNFTs, AppError>) -> Void))
 }
 
 class FeaturedService: Service<FeaturedAPI>, FeaturedServiceProtocol {
     
-    func fetchFeatured(api: FeaturedAPI, _ completion: @escaping ((FeaturedNFTs?) -> Void)) {
+    func fetchFeatured(api: FeaturedAPI, _ completion: @escaping ((Result<FeaturedNFTs, AppError>) -> Void)) {
         fetch(api: .list) { result in
             
             switch result {
             case .success(let data):
-                // TODO: remove this forcce unwrap
-                
-                let featuredNFTs: FeaturedNFTs = try! JSONDecoder().decode(FeaturedNFTs.self, from: data)
-                completion(featuredNFTs)
-            case .failure(let error):
-                completion(nil)
+                let featuredNFTs: FeaturedNFTs?
+                do {
+                    featuredNFTs = try JSONDecoder().decode(FeaturedNFTs.self, from: data)
+                    if let nfts = featuredNFTs {
+                        completion(.success(nfts))
+                    } else {
+                        completion(.failure(.emptyResponse))
+                    }
+                } catch (_) {
+                    completion(.failure(.parse))
+                }
+            case .failure(_):
+                completion(.failure(.network))
             }
         }
     }
-
 }

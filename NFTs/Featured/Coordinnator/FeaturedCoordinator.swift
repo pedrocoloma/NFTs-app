@@ -14,11 +14,14 @@ class FeaturedCoordinator: Coordinator {
     
     // MARK: - Properties
     var featuredViewModel: FeaturedViewModel
-    var featuredViewController: FeaturedViewController?
+    var featuredViewController: FeaturedViewController
     
+    // MARK: - initializer
     init() {
         featuredViewModel = FeaturedViewModel()
-        navigation = UINavigationController(rootViewController: FeaturedViewController(viewModel: featuredViewModel))
+        featuredViewController = FeaturedViewController(viewModel: featuredViewModel)
+        featuredViewModel.viewDelegate = featuredViewController
+        navigation = UINavigationController(rootViewController: featuredViewController)
     }
     
     func start() {
