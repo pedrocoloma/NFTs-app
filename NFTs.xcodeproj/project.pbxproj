@@ -10,6 +10,7 @@
 		F56DA6B427EA82CB0012ADE0 /* FeaturedViewModelDelegateMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56DA6B327EA82CB0012ADE0 /* FeaturedViewModelDelegateMock.swift */; };
 		F56DA6B727EAA1890012ADE0 /* FeaturedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56DA6B527EAA1890012ADE0 /* FeaturedCell.swift */; };
 		F56DA6B827EAA1890012ADE0 /* FeaturedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F56DA6B627EAA1890012ADE0 /* FeaturedCell.xib */; };
+		F5BC1A4E27EFD45400847341 /* FeaturedAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BC1A4D27EFD45400847341 /* FeaturedAPI.swift */; };
 		F5BC1A5227EFEB6E00847341 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BC1A5127EFEB6E00847341 /* Service.swift */; };
 		F5BC1A5427F0B5A300847341 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BC1A5327F0B5A300847341 /* API.swift */; };
 		F5E6200627E67F1400C3B2FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E6200527E67F1400C3B2FC /* AppDelegate.swift */; };
@@ -24,8 +25,8 @@
 		F5E6204627E7E14400C3B2FC /* FeaturedCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E6204527E7E14400C3B2FC /* FeaturedCoordinator.swift */; };
 		F5E6204927E7E1BB00C3B2FC /* FeaturedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E6204827E7E1BB00C3B2FC /* FeaturedViewModel.swift */; };
 		F5E6204B27E7E2ED00C3B2FC /* FeaturedViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E6204A27E7E2ED00C3B2FC /* FeaturedViewModelTests.swift */; };
-		F5E6204E27E7E88C00C3B2FC /* NFTsServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E6204D27E7E88C00C3B2FC /* NFTsServiceMock.swift */; };
-		F5E6205027E7E97B00C3B2FC /* NFTsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E6204F27E7E97B00C3B2FC /* NFTsService.swift */; };
+		F5E6204E27E7E88C00C3B2FC /* FeaturedServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E6204D27E7E88C00C3B2FC /* FeaturedServiceMock.swift */; };
+		F5E6205027E7E97B00C3B2FC /* FeaturedService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E6204F27E7E97B00C3B2FC /* FeaturedService.swift */; };
 		F5E6205227E81D2400C3B2FC /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E6205127E81D2400C3B2FC /* Model.swift */; };
 		F5E6205427E81FB200C3B2FC /* featured_nfts.json in Resources */ = {isa = PBXBuildFile; fileRef = F5E6205327E81FB200C3B2FC /* featured_nfts.json */; };
 /* End PBXBuildFile section */
@@ -51,6 +52,7 @@
 		F56DA6B327EA82CB0012ADE0 /* FeaturedViewModelDelegateMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedViewModelDelegateMock.swift; sourceTree = "<group>"; };
 		F56DA6B527EAA1890012ADE0 /* FeaturedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedCell.swift; sourceTree = "<group>"; };
 		F56DA6B627EAA1890012ADE0 /* FeaturedCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeaturedCell.xib; sourceTree = "<group>"; };
+		F5BC1A4D27EFD45400847341 /* FeaturedAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedAPI.swift; sourceTree = "<group>"; };
 		F5BC1A5127EFEB6E00847341 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		F5BC1A5327F0B5A300847341 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		F5E6200227E67F1400C3B2FC /* NFTs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NFTs.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -69,8 +71,8 @@
 		F5E6204527E7E14400C3B2FC /* FeaturedCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedCoordinator.swift; sourceTree = "<group>"; };
 		F5E6204827E7E1BB00C3B2FC /* FeaturedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedViewModel.swift; sourceTree = "<group>"; };
 		F5E6204A27E7E2ED00C3B2FC /* FeaturedViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedViewModelTests.swift; sourceTree = "<group>"; };
-		F5E6204D27E7E88C00C3B2FC /* NFTsServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFTsServiceMock.swift; sourceTree = "<group>"; };
-		F5E6204F27E7E97B00C3B2FC /* NFTsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFTsService.swift; sourceTree = "<group>"; };
+		F5E6204D27E7E88C00C3B2FC /* FeaturedServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedServiceMock.swift; sourceTree = "<group>"; };
+		F5E6204F27E7E97B00C3B2FC /* FeaturedService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedService.swift; sourceTree = "<group>"; };
 		F5E6205127E81D2400C3B2FC /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		F5E6205327E81FB200C3B2FC /* featured_nfts.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = featured_nfts.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -213,7 +215,8 @@
 		F5E6204327E7E0E800C3B2FC /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				F5E6204F27E7E97B00C3B2FC /* NFTsService.swift */,
+				F5E6204F27E7E97B00C3B2FC /* FeaturedService.swift */,
+				F5BC1A4D27EFD45400847341 /* FeaturedAPI.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -237,7 +240,7 @@
 		F5E6204C27E7E86E00C3B2FC /* Mock */ = {
 			isa = PBXGroup;
 			children = (
-				F5E6204D27E7E88C00C3B2FC /* NFTsServiceMock.swift */,
+				F5E6204D27E7E88C00C3B2FC /* FeaturedServiceMock.swift */,
 				F5E6205327E81FB200C3B2FC /* featured_nfts.json */,
 			);
 			path = Mock;
@@ -380,9 +383,10 @@
 				F5E6203C27E7B8DB00C3B2FC /* AppCoordinator.swift in Sources */,
 				F5E6204927E7E1BB00C3B2FC /* FeaturedViewModel.swift in Sources */,
 				F5E6204627E7E14400C3B2FC /* FeaturedCoordinator.swift in Sources */,
-				F5E6205027E7E97B00C3B2FC /* NFTsService.swift in Sources */,
+				F5E6205027E7E97B00C3B2FC /* FeaturedService.swift in Sources */,
 				F5E6203727E6B43000C3B2FC /* FeaturedViewController.swift in Sources */,
 				F56DA6B727EAA1890012ADE0 /* FeaturedCell.swift in Sources */,
+				F5BC1A4E27EFD45400847341 /* FeaturedAPI.swift in Sources */,
 				F5BC1A5227EFEB6E00847341 /* Service.swift in Sources */,
 				F5E6200827E67F1400C3B2FC /* SceneDelegate.swift in Sources */,
 				F5BC1A5427F0B5A300847341 /* API.swift in Sources */,
@@ -394,7 +398,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F5E6204E27E7E88C00C3B2FC /* NFTsServiceMock.swift in Sources */,
+				F5E6204E27E7E88C00C3B2FC /* FeaturedServiceMock.swift in Sources */,
 				F5E6204B27E7E2ED00C3B2FC /* FeaturedViewModelTests.swift in Sources */,
 				F56DA6B427EA82CB0012ADE0 /* FeaturedViewModelDelegateMock.swift in Sources */,
 			);

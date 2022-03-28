@@ -13,11 +13,12 @@ class FeaturedCoordinator: Coordinator {
     var navigation: UINavigationController
     
     // MARK: - Properties
-    var featuredViewModel: FeaturedViewModel?
+    var featuredViewModel: FeaturedViewModel
     var featuredViewController: FeaturedViewController?
     
     init() {
-        navigation = UINavigationController(rootViewController: FeaturedViewController())
+        featuredViewModel = FeaturedViewModel()
+        navigation = UINavigationController(rootViewController: FeaturedViewController(viewModel: featuredViewModel))
     }
     
     func start() {

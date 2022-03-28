@@ -12,13 +12,24 @@ class FeaturedViewController: UIViewController {
     // MARK: - Outlets
     @IBOutlet weak var tableView: UITableView!
     
-    let items: [String] = []
+    let items = ["um", "dois", "três", "quatro"]
+    var viewModel: FeaturedViewModel?
+    
+    init(viewModel: FeaturedViewModel) {
+        super.init(nibName: nil, bundle: nil)
+        self.viewModel = viewModel
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(nibName: nil, bundle: nil)
+    }
     
     // MARK: - Overrides Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "alguma coisa"
         setupTableView()
+        viewModel?.fetchData()
     }
     
     // MARK: - Private Methods

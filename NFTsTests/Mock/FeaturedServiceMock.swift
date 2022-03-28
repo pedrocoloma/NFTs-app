@@ -1,5 +1,5 @@
 //
-//  NFTsServiceMock.swift
+//  FeaturedServiceMock.swift
 //  NFTsTests
 //
 //  Created by Pedro Felipe Coloma de Araujo on 20/03/22.
@@ -13,10 +13,10 @@ enum APIError: Error {
     case parseError
 }
 
-class NFTsServiceMock: NFTsServiceProtocol {
+class FeaturedServiceMock: FeaturedServiceProtocol {
     var errorAPI: APIError? = nil
     
-    func fetchFeaturedList(_ completion: @escaping ((FeaturedNFTs?) -> Void)) {
+    func fetchFeatured(api: FeaturedAPI, _ completion: @escaping ((FeaturedNFTs?) -> Void)) {
         switch errorAPI {
         case .parseError:
             completion(nil)

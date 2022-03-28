@@ -10,9 +10,11 @@ import XCTest
 
 class FeaturedViewModelDelegateMock: FeaturedViewModelDelegate {
     
-    var displayedFeatureddData = false
+    var displayedFeaturedData = false
     var displayedError = false
     
-    
+    func didFetchFeaturedData(_ data: FeaturedNFTs) {
+        displayedFeaturedData = true
+    }
 }
 
