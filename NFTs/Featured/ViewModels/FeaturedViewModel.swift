@@ -8,7 +8,7 @@
 import Foundation
 
 protocol FeaturedViewModelDelegate: AnyObject {
-    func didSelect(at position: Int)
+    func didSelect(nft: NFT)
 }
 
 protocol FeaturedViewDelegate: AnyObject {
@@ -43,7 +43,7 @@ class FeaturedViewModel {
         }
     }
     
-    func didSelect(at position: Int) {
-        delegate?.didSelect(at: position)
+    func didSelect(nft: NFT) {
+        delegate?.didSelect(nft: nft)
     }
 }

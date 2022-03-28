@@ -11,6 +11,7 @@ struct NFT: Decodable {
     var name: String?
     var collection: String?
     var id: String
+    var description: String?
     var image_url: String?
     var listing: String?
     var top_bid_weth: String?

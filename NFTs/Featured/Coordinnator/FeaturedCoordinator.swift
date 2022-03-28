@@ -32,8 +32,8 @@ class FeaturedCoordinator: Coordinator {
 }
 
 extension FeaturedCoordinator: FeaturedViewModelDelegate {
-    func didSelect(at position: Int) {
-        let detailsViewController = FeaturedDetailsViewController()
+    func didSelect(nft: NFT) {
+        let detailsViewController = FeaturedDetailsViewController(nft: nft)
         navigation.pushViewController(detailsViewController, animated: true)
     }
 }
