@@ -16,6 +16,7 @@ struct NFT: Decodable {
     var listing: String?
     var top_bid_weth: String?
     var top_bid_dollars: String?
+    var collection_image_url: String?
 }
 
 struct FeaturedNFTs: Decodable {

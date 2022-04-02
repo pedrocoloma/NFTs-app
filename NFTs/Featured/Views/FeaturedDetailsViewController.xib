@@ -10,9 +10,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FeaturedDetailsViewController" customModule="NFTs" customModuleProvider="target">
             <connections>
+                <outlet property="collectionImageView" destination="oXi-mG-SbB" id="Sdf-oq-4et"/>
                 <outlet property="collectionLabel" destination="UG8-3P-ATU" id="5UN-bC-7H8"/>
                 <outlet property="descriptionLabel" destination="MrD-gO-uuC" id="XVG-Ea-6wc"/>
                 <outlet property="nameLabel" destination="MaM-p8-EjJ" id="hnm-5w-Efb"/>
+                <outlet property="nftImageView" destination="trE-h6-45c" id="SSl-wM-bHo"/>
                 <outlet property="topBidLabel" destination="Cj9-1K-e4v" id="AuN-Ce-uVs"/>
                 <outlet property="topBidUsdLabel" destination="KtY-7R-nCe" id="2k1-eq-g68"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>

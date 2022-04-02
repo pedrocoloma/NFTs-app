@@ -17,13 +17,21 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="luJ-bM-kj0">
-                        <rect key="frame" x="20" y="235" width="347" height="27"/>
+                        <rect key="frame" x="20" y="244" width="347" height="18"/>
                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="sample" translatesAutoresizingMaskIntoConstraints="NO" id="WKg-kf-FM8">
-                        <rect key="frame" x="16" y="16" width="339" height="211"/>
+                        <rect key="frame" x="16" y="16" width="339" height="220"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="220" id="YKq-uX-BUE"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="12"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </imageView>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sample" translatesAutoresizingMaskIntoConstraints="NO" id="8bq-cL-YRL">
                         <rect key="frame" x="16" y="270" width="36" height="36"/>
@@ -92,7 +100,9 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="collectionImageView" destination="8bq-cL-YRL" id="tJJ-by-tAT"/>
                 <outlet property="nameLabel" destination="luJ-bM-kj0" id="mnD-OC-Sni"/>
+                <outlet property="nftImageView" destination="WKg-kf-FM8" id="gMS-B8-1fi"/>
             </connections>
             <point key="canvasLocation" x="170" y="189.09952606635071"/>
         </tableViewCell>

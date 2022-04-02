@@ -10,8 +10,10 @@ import UIKit
 class FeaturedDetailsViewController: UIViewController {
     
     // MARK: - Outlets
+    @IBOutlet weak var nftImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var collectionImageView: UIImageView!
     @IBOutlet weak var collectionLabel: UILabel!
     @IBOutlet weak var topBidLabel: UILabel!
     @IBOutlet weak var topBidUsdLabel: UILabel!
@@ -39,6 +41,14 @@ class FeaturedDetailsViewController: UIViewController {
         nameLabel.text = nft?.name
         descriptionLabel.text = nft?.description
         collectionLabel.text = nft?.collection
+        
+        if let imageUrl = nft?.image_url, let url = URL(string: imageUrl) {
+            nftImageView.kf.setImage(with: url)
+        }
+        
+        if let collection_image_url = nft?.collection_image_url, let url = URL(string: collection_image_url) {
+            collectionImageView.kf.setImage(with: url)
+        }
         
         topBidLabel.text = nft?.top_bid_weth
         

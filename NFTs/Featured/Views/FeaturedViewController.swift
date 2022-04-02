@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class FeaturedViewController: UIViewController {
     
@@ -50,7 +51,7 @@ extension FeaturedViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! FeaturedCell
-        cell.nameLabel.text = items[indexPath.row].name
+        cell.setup(with: items[indexPath.row])
         return cell
     }
     
